@@ -1,0 +1,27 @@
+<html>
+<style>
+  #mapwize {
+  height: 400px;
+}
+</style>
+
+<body>
+<div id="mapwize"></div>
+  <script type="module">
+    import * as MapwizeUI from "./node_modules/mapwize-ui/mapwizeui.js";
+    import * as Mapwize from "./node_modules/mapwize/mapwize.js";
+console.log(MapwizeUI);
+ Mapwize.apiKey('1f04d780dc30b774c0c10f53e3c7d4ea'); // This is a demo key. It is not allowed to use it for production. The key might change at any time without notice. Get your key by signin up at mapwize.io
+Mapwize.map({
+  container: 'mapwize'
+}).then(mapInstance => {
+  console.log('Maps is now ready to be used')
+}).catch(err => {
+	// Something bad happened during Mapwize loading
+	console.error(err);
+});
+
+</script>
+</body>
+
+</html>
